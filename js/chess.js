@@ -586,8 +586,13 @@ var levels = [
 
 	}
 
+	function meTest () {
+		console.log("METEST");
+	}
+
 	window.SearchAndRedraw = SearchAndRedraw;
 	window.onLoaded = onLoaded;
+	window.meTest = meTest;
 	window.redrawBoard = redrawBoard;
 	window.EnsureAnalysisStopped = EnsureAnalysisStopped;
 	window.InitializeBackgroundEngine = InitializeBackgroundEngine;

@@ -92,6 +92,10 @@ var textures   = {};
 
 	}
 
+
+	// BELOW IS LOADING GRAPHICS
+	
+	// background glow on the progress bar
 	function initGlow() {
 		// create and set the green glow in the background
 		var size = window.innerWidth*LOADING_BAR_SCALE*1.8;
@@ -226,6 +230,7 @@ var textures   = {};
 
 	}
 
+	// loading progress bar
 	function initBar() {
 		// jQuery progress bar
 		$bar = $('<div>')
@@ -252,7 +257,7 @@ var textures   = {};
 		$bar.children().removeClass('ui-corner-left');
 
 
-		// that's where the progression happens
+		// where the progress bar updates
 		$bar.update = function(p) {
 			p = Math.round(p*100);
 			$bar.progressbar( "value", p );
@@ -264,6 +269,7 @@ var textures   = {};
 
 	}
 
+	// just centers page elements
 	function centering() {
 		$bar.position({
 			of:window,
@@ -298,6 +304,7 @@ var textures   = {};
 		initGlow();
 		initTips();
 		initBar();
+		// center the progress bar
 		centering();
 
 		loadResources();

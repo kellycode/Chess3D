@@ -68,12 +68,26 @@
             }
         </style>
 
-        <!-- JQuery //-->
+        <!-- JQuery -->
         <link href="css/dark-hive/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
         <script src="js/jquery/jquery-1.9.1.js"></script>
         <script src="js/jquery/jquery-ui-1.10.3.custom.min.js"></script>
 
-        <!-- libraries //-->
+        <!-- Three Module -->
+        <script type="importmap">
+            {
+            "imports": {
+            "three": "./js/lib/threes/r170/three.module.js"
+            }
+            }
+        </script>
+        <script type="module">
+            import{ Loading } from './js/LoadingModule.js';
+            // init is a static 
+            Loading.init();
+        </script>
+
+        <!-- libraries -->
         <script type="text/javascript" src="js/lib/threes/r58/three.min.js"></script>
         <script type="text/javascript" src="js/lib/OrbitAndPanControls.js"></script>
 
@@ -102,7 +116,6 @@
         <script type="text/javascript" src="js/pgnParser.js"></script>
         <script type="text/javascript" src="js/gui.js"></script>
         <script type="text/javascript" src="js/chess.js"></script>
-        <script type="text/javascript"></script>
     </head>
     <body id="container"></body>
 </html>
